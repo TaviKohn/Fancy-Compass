@@ -13,6 +13,10 @@
 		434EC8BC1B634B2B00B66C69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434EC8BB1B634B2B00B66C69 /* Images.xcassets */; };
 		434EC8BF1B634B2B00B66C69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434EC8BD1B634B2B00B66C69 /* LaunchScreen.xib */; };
 		434EC8CB1B634B2C00B66C69 /* Fancy_CompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC8CA1B634B2C00B66C69 /* Fancy_CompassTests.swift */; };
+		43A7F2161B66D612006655C3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A7F2151B66D612006655C3 /* CoreMotion.framework */; };
+		43A7F21A1B67DB75006655C3 /* CompassData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7F2191B67DB75006655C3 /* CompassData.swift */; };
+		43B0EE5C1B645EA000D9C345 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B0EE5B1B645EA000D9C345 /* SceneKit.framework */; };
+		43E2E9CB1B647BAE00AAA0B0 /* Fancy Compass.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E2E9CA1B647BAE00AAA0B0 /* Fancy Compass.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		434EC8C41B634B2C00B66C69 /* Fancy CompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fancy CompassTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		434EC8C91B634B2C00B66C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434EC8CA1B634B2C00B66C69 /* Fancy_CompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fancy_CompassTests.swift; sourceTree = "<group>"; };
+		43A7F2151B66D612006655C3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		43A7F2191B67DB75006655C3 /* CompassData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassData.swift; sourceTree = "<group>"; };
+		43B0EE5B1B645EA000D9C345 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		43E2E9CA1B647BAE00AAA0B0 /* Fancy Compass.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "Fancy Compass.scnassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A7F2161B66D612006655C3 /* CoreMotion.framework in Frameworks */,
+				43B0EE5C1B645EA000D9C345 /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,8 @@
 		434EC8A61B634B2B00B66C69 = {
 			isa = PBXGroup;
 			children = (
+				43A7F2151B66D612006655C3 /* CoreMotion.framework */,
+				43B0EE5B1B645EA000D9C345 /* SceneKit.framework */,
 				434EC8B11B634B2B00B66C69 /* Fancy Compass */,
 				434EC8C71B634B2C00B66C69 /* Fancy CompassTests */,
 				434EC8B01B634B2B00B66C69 /* Products */,
@@ -79,9 +91,11 @@
 			children = (
 				434EC8B41B634B2B00B66C69 /* AppDelegate.swift */,
 				434EC8B61B634B2B00B66C69 /* ViewController.swift */,
+				43A7F2191B67DB75006655C3 /* CompassData.swift */,
 				434EC8B81B634B2B00B66C69 /* Main.storyboard */,
 				434EC8BB1B634B2B00B66C69 /* Images.xcassets */,
 				434EC8BD1B634B2B00B66C69 /* LaunchScreen.xib */,
+				43E2E9CA1B647BAE00AAA0B0 /* Fancy Compass.scnassets */,
 				434EC8B21B634B2B00B66C69 /* Supporting Files */,
 			);
 			path = "Fancy Compass";
@@ -195,6 +209,7 @@
 				434EC8BA1B634B2B00B66C69 /* Main.storyboard in Resources */,
 				434EC8BF1B634B2B00B66C69 /* LaunchScreen.xib in Resources */,
 				434EC8BC1B634B2B00B66C69 /* Images.xcassets in Resources */,
+				43E2E9CB1B647BAE00AAA0B0 /* Fancy Compass.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A7F21A1B67DB75006655C3 /* CompassData.swift in Sources */,
 				434EC8B71B634B2B00B66C69 /* ViewController.swift in Sources */,
 				434EC8B51B634B2B00B66C69 /* AppDelegate.swift in Sources */,
 			);
@@ -272,7 +288,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -291,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -317,7 +333,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -330,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,9 +358,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Fancy Compass/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -352,9 +372,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Fancy Compass/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -411,6 +435,7 @@
 				434EC8D01B634B2C00B66C69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		434EC8D11B634B2C00B66C69 /* Build configuration list for PBXNativeTarget "Fancy CompassTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +444,7 @@
 				434EC8D31B634B2C00B66C69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
