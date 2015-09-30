@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 		let motionManager = CMMotionManager()
 		
-		scene = SCNScene(named: "Fancy Compass.scnassets/Compass.dae")!	//Load Scene from Compass.dae
+		scene = SCNScene(named: "Fancy Compass.scnassets/Compass.scn")!	//Load Scene from Compass.dae
 		
 		//Set up the Camera
 		
@@ -87,8 +87,8 @@ class ViewController: UIViewController {
 			motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {deviceManager, error in
 				dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
 					self.compassData.updateCompassOrientation(self.compass)
-					self.compassData.xRotation = self.motionManager.deviceMotion.attitude.pitch
-					self.compassData.yRotation = self.motionManager.deviceMotion.attitude.roll
+					self.compassData.xRotation = self.motionManager.deviceMotion!.attitude.pitch
+					self.compassData.yRotation = self.motionManager.deviceMotion!.attitude.roll
 				}
 				})
 		//} else {

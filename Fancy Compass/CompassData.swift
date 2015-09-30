@@ -25,7 +25,7 @@ public class CompassData {
 	
 	public func updateCompassOrientation(compass: SCNNode) -> SCNNode {
 		compass.eulerAngles = SCNVector3(x: Float(xRotation), y: Float(yRotation), z: Float(zRotation))
-		println("eulerAngles Vector:\tx: \(xRotation)\ty: \(yRotation)\tz: \(zRotation)")
+		print("eulerAngles Vector:\tx: \(xRotation)\ty: \(yRotation)\tz: \(zRotation)", appendNewline: false)
 		return compass
 	}
 	
