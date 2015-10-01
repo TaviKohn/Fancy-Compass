@@ -23,9 +23,8 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		// Do any additional setup after loading the view, typically from a nib.
-		let motionManager = CMMotionManager()
 		
-		scene = SCNScene(named: "Fancy Compass.scnassets/Compass.scn")!	//Load Scene from Compass.dae
+		scene = SCNScene(named: "Fancy Compass.scnassets/Compass.dae")!	//Load Scene from Compass.dae
 		
 		//Set up the Camera
 		
@@ -65,22 +64,12 @@ class ViewController: UIViewController {
 		let sceneView = self.view as! SCNView
 		sceneView.scene = scene
 		
-		sceneView.allowsCameraControl = true
+		//sceneView.allowsCameraControl = true
 		
 		sceneView.showsStatistics = true
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		
-		if motionManager.accelerometerAvailable {
-			motionManager.accelerometerUpdateInterval = 0.1
-			motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: { [weak self] (data: CMAccelerometerData!, error: NSError!) in
-				self.xRotation = atan(data.acceleration.x / sqrt((data.acceleration.y ^ 2) + (data.acceleration.z ^ 2)))
-				self.yRotation = atan(data.acceleration.y / sqrt((data.acceleration.x ^ 2) + (data.acceleration.z ^ 2)))
-				}
-			)
-		}
-		
 		
 		if motionManager.deviceMotionAvailable {
 			motionManager.deviceMotionUpdateInterval = 0.1
@@ -89,23 +78,13 @@ class ViewController: UIViewController {
 					self.compassData.updateCompassOrientation(self.compass)
 					self.compassData.xRotation = self.motionManager.deviceMotion!.attitude.pitch
 					self.compassData.yRotation = self.motionManager.deviceMotion!.attitude.roll
+					self.compassData.zRotation = self.motionManager.deviceMotion!.magneticField.field.z
 				}
 			})
 		} else {
 			print("Motion Data Not Available!\n")
 		}
-		
-		/*
-		if motionManager.deviceMotionAvailable {
-		motionManager.deviceMotionUpdateInterval = 0.1
-		motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {deviceManager, error in
-		compass.xRotation = motion.attitude.pitch
-		})
-		}
-		*/
-		
 	}
-	
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
